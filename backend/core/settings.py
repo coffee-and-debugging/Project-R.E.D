@@ -42,12 +42,21 @@ INSTALLED_APPS = [
     
     'api',
     'locations',
+    'users',
+    'hospitals',
+    'blood_requests',
+    'donations',
+    'ml_predictions',
+    'notifications',
+    'chats',
+    'admin_control',
+    'reports',
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
-    ]
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
 }
 
 MIDDLEWARE = [
@@ -59,6 +68,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTH_USER_MODEL = 'users.User'
 
 ROOT_URLCONF = 'core.urls'
 

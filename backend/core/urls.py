@@ -20,6 +20,18 @@ from api.views import hello_world
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/hello/', hello_world),
-    path('api/location/', include('locations.urls')),
+    # path('api/hello/', hello_world),
+    # path('api/location/', include('locations.urls')),
+    path('api/users/', include('users.urls')),
+
+    # path('locations/', include('locations.urls')),
+    # path('users/', include('users.urls')),
+    # path('hospitals/', include('hospitals.urls')),
+    # path('blood_requests/', include('blood_requests.urls')),
+    # path('donations/', include('donations.urls')),
+    # path('ml_predictions/', include('ml_predictions.urls')),
+    # path('notifications/', include('notifications.urls')),
+    # path('chats/', include('chats.urls')),
+    # path('admin_control/', include('admin_control.urls')),
+    # path('reports/', include('reports.urls')),
 ]
