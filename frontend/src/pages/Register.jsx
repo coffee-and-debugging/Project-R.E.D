@@ -31,6 +31,7 @@ export default function Register() {
         <input className="w-full p-2 border rounded" name="username" placeholder="Username" onChange={handleChange} required />
         <input className="w-full p-2 border rounded" name="email" placeholder="Email" onChange={handleChange} required />
         <input type="password" className="w-full p-2 border rounded" name="password" placeholder="Password" onChange={handleChange} required />
+        <input type="password" className="w-full p-2 border rounded" name="password2" placeholder="Password2" onChange={handleChange} required />
         <select name="role" onChange={handleChange} className="w-full p-2 border rounded">
           <option value="donor">Donor</option>
           <option value="patient">Patient</option>
@@ -39,6 +40,11 @@ export default function Register() {
         </select>
         <input className="w-full p-2 border rounded" name="bloodgroup" placeholder="Blood Group" onChange={handleChange} required />
         <input className="w-full p-2 border rounded" name="age" placeholder="Age" onChange={handleChange} required />
+        <select name="sex" onChange={handleChange} className="w-full p-2 border rounded">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
         <input className="w-full p-2 border rounded" name="phone" placeholder="Phone Number" onChange={handleChange} required />
         <input className="w-full p-2 border rounded" name="address" placeholder="Address" onChange={handleChange} required />
         <input className="w-full p-2 border rounded" name="allergies" placeholder="Allergies" onChange={handleChange} required />

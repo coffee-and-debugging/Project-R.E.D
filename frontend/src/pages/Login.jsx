@@ -15,7 +15,7 @@ export default function Login() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8000/api/login/', formData);
+      const res = await axios.post('http://localhost:8000/api/users/me/', formData);
       const token = res.data.token;
       localStorage.setItem('token', token);
 
@@ -24,6 +24,7 @@ export default function Login() {
 
       navigate(`/${role}-dashboard`);
     } catch (err) {
+      console.error('Registration error:', err.response?.data);
       alert('Login failed');
     }
   };
