@@ -10,8 +10,10 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         model = User
         fields = [
             'username', 'email', 'password', 'password2',
-            'blood_group', 'allergies', 'age', 'sex', 'address', 'contact',
-            'is_donor', 'is_patient', 'location'
+            'blood_group', 'allergies', 'dob', 'sex', 'address', 'contact',
+            'is_donor', 'is_patient', 'location', 'fcm_token', 'occupation', 'suffers_any_disease',
+            'ever_tested_hiv_positive', 'cardiac_problems', 'bleeding_disorders',
+            'donated_blood_before', 'takes_medication',
         ]
 
     def validate(self, attrs):
